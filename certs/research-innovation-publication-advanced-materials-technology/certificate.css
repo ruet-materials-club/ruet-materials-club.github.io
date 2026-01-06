@@ -1,0 +1,95 @@
+
+			/* reset */
+
+			*
+			{
+				border: 0;
+				box-sizing: content-box;
+				color: inherit;
+				font-family: inherit;
+				font-size: inherit;
+				font-style: inherit;
+				font-weight: inherit;
+				line-height: inherit;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				vertical-align: top;
+			}
+
+
+			/* page */
+
+			html {overflow: auto; padding: 0.5in; }
+			html { background: #999; cursor: default; }
+
+			body { box-sizing: border-box; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 11.69in; height: 8.27in;}
+			body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); 
+        
+         background-image: url("./Certificate.jpg");
+        background-size: contain;       /* fits inside screen */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+      
+      }
+
+      h1{
+        font-family: "LucidaCalligraphy", serif;
+        font-size: 40pt;
+        color: #855d25;
+        text-align: center;
+        margin-top: 232pt;
+      }
+			@media print {
+				* { -webkit-print-color-adjust: exact; }
+				html { background: none; padding: 0; }
+				body { box-shadow: none; margin: 0; }
+				span:empty { display: none; }
+				.add, .cut { display: none; }
+			}
+
+			@page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      @font-face {
+        font-family: "LucidaCalligraphy";
+        src: url("./LucidaUnicodeCalligraphy.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .print-btn {
+  position: fixed;        /* removes from normal layout */
+  top: 0px;
+  left: 0px;
+  z-index: 999999;        /* stays above everything */
+
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+
+  /* extra safety: prevent any layout influence */
+  display: inline-block;
+}
+
+/* optional hover effect */
+.print-btn:hover {
+  background: #444;
+}
+
+/* Hide button while printing */
+@media print {
+  .print-btn {
+    display: none;
+  }
+}

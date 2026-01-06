@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missing Information</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f6f7fb;
+      color: #111827;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 640px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      background: #111827;
+      text-decoration: none;
+      transition: transform 0.08s ease, background 0.2s ease;
+      user-select: none;
+    }
+
+    .btn:hover { background: #0b1220; }
+    .btn:active { transform: scale(0.98); }
+
+    .btn svg { width: 18px; height: 18px; }
+
+    /* Optional: nicer focus for keyboard users */
+    .btn:focus-visible {
+      outline: 3px solid rgba(59,130,246,0.5);
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="status" aria-live="polite">
+    <h1>Information is missing, please contact club secretary for certificate.</h1>
+    <p>If you believe this is a mistake, please reach out to the club secretary for assistance.</p>
+
+    <a class="btn" id="homeBtn" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5z"/>
+      </svg>
+      Home
+    </a>
+  </main>
+
+  <script>
+    // Home button redirect to index page
+    document.getElementById("homeBtn").addEventListener("click", function (e) {
+      e.preventDefault();
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
